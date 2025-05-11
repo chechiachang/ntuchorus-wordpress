@@ -18,8 +18,7 @@ services:
       - db
     image: wordpress:6.4.2-php8.1-apache
     restart: always
-    ports:
-      - 8080:80
+    network_mode: "host"
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress
